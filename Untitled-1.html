@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Para Minha Princezoca 💖</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffe4ec, #fff);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #d6336c;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photos img {
+            width: 280px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .photos img:hover {
+            transform: scale(1.05);
+        }
+
+        .message {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(214, 51, 108, 0.2);
+            font-size: 1.2em;
+            color: #444;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            color: #aaa;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        /* Corações caindo */
+        .heart {
+            position: fixed;
+            color: red;
+            font-size: 24px;
+            animation: fall linear infinite;
+            z-index: 9999;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .photos {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <audio autoplay loop>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/wf5n5k5z87f4k8fg0i7m3/Superpowers-Daniel-Caesar.mp3?rlkey=peo90wwxdfl45v3hmhfvlv2re&dl=0" type="audio/mpeg">
+        Seu navegador não suporta áudio :(
+    </audio>
+
+    <header>
+        <h1>Oi, minha princezoca 💕</h1>
+        <p>Esse site é só pra te lembrar do quanto você é especial!</p>
+    </header>
+
+    <section class="photos">
+        <img src="f18dc8fb-03c9-4bc4-b508-af202cf0d17c.png" alt="Foto 1 da minha linda">
+        <img src="548cca4d-b8f4-40f9-9be6-d5a46385c5f2.png" alt="Foto 2 da minha linda">
+    </section>
+
+    <section class="message">
+        <p>Oioi cabeçuda 😘</p>
+        <p>Eu só queria te falar que eu te amo da forma mais sincera que eu conheço, da forma mais paciente e amorosa.</p>
+        <p>Eu te amo. Eu amo tudo em você — e não é só a sua aparência. Eu amo seu jeitinho carinhoso, e o coração enorme que você tem.</p>
+        <p>Obrigado por me fazer feliz todos os dias. Eu quero casar com você, ter 3 filhotinhos e 1 cachorrinho, tá? 🐶</p>
+        <p>Tô com sdd...</p>
+    </section>
+
+    <footer>
+        Com amor, seu namorado lindo, cheiroso e protagonista 💌
+    </footer>
+
+    <script>
+        // Gerar corações caindo
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerText = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
